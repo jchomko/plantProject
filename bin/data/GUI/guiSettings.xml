@@ -1,0 +1,50 @@
+<Widget>
+    <Kind>4</Kind>
+    <Name>RUN SPEED</Name>
+    <Value>2.721518993</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>LIFE SPAN</Name>
+    <Value>139.240509033</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ARDUINO DELAY TIME</Name>
+    <Value>187.974685669</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>SOFTWARE DELAY TIME</Name>
+    <Value>598.101257324</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DETECTION DISTANCE</Name>
+    <Value>170.886062622</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>THRESHOLD</Name>
+    <Value>24.208860397</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>BLOB THRESHOLD</Name>
+    <Value>151.898727417</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MOTION PRESENT DELAY</Name>
+    <Value>13860.759765625</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MAX NUMBER OF VEHICLES</Name>
+    <Value>1.455696225</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIN DIST</Name>
+    <Value>17.405063629</Value>
+</Widget>
