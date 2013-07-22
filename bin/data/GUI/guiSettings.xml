@@ -6,7 +6,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>LIFE SPAN</Name>
-    <Value>139.240509033</Value>
+    <Value>80.696205139</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -41,10 +41,10 @@
 <Widget>
     <Kind>4</Kind>
     <Name>MAX NUMBER OF VEHICLES</Name>
-    <Value>1.455696225</Value>
+    <Value>1.202531695</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>MIN DIST</Name>
-    <Value>17.405063629</Value>
+    <Value>12.974683762</Value>
 </Widget>

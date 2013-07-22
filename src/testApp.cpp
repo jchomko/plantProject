@@ -83,7 +83,7 @@ void testApp::setup(){
     
     serial.listDevices();
 	vector <ofSerialDeviceInfo> deviceList = serial.getDeviceList();
-    serial.setup(5, 9600); //57600 //9600
+    serial.setup(0, 9600); //57600 //9600
     arduinoReady = true;
     bytesBack = "";
     

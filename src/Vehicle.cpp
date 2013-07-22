@@ -68,24 +68,25 @@ void Vehicle::run() {
 
 // Method to update location
 void Vehicle::update() {
+    
     // Update velocity
-	
 	if(!stop){
         
-        float m = 0;
+        float m = 0.1;
 
         if(life > 0){
             m = (float)lifespan/life;
         }
-        cout << m;
+       // cout << m;
         
         velocity += acceleration;
+        
         // Limit speed
         velocity.limit(maxspeed/m);
         
         // cout << maxspeed*m;
-        
         location += velocity;
+        
         // Reset accelertion to 0 each cycle
         acceleration *= 0;
 		
@@ -145,7 +146,7 @@ void Vehicle::avoid(ofVec2f target){
 	
 	
 	desired.normalize();
-	desired *= - maxspeed*5;
+	desired *= - maxspeed; //*5
 	
 	
 	ofVec2f steer = desired - velocity;
@@ -185,6 +186,8 @@ void Vehicle::seek(ofVec2f target) {
 	
     applyForce(steer);
 }
+
+
 
 void Vehicle::display() {
     // Draw a triangle rotated in the direction of velocity

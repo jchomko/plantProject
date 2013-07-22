@@ -19,8 +19,6 @@
 		CBABF42016E4DF9600B2A337 /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBABF3A716E4DF9600B2A337 /* ofxCvHaarFinder.cpp */; };
 		CBABF42116E4DF9600B2A337 /* ofxCvImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBABF3A916E4DF9600B2A337 /* ofxCvImage.cpp */; };
 		CBABF42216E4DF9600B2A337 /* ofxCvShortImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBABF3AC16E4DF9600B2A337 /* ofxCvShortImage.cpp */; };
-		CBABFDD716E7851600B2A337 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBABFDD316E7851600B2A337 /* Boid.cpp */; };
-		CBABFDD816E7851600B2A337 /* ofxFlocking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBABFDD516E7851600B2A337 /* ofxFlocking.cpp */; };
 		CBC0C64316EF3815004293FE /* Vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0C64116EF3815004293FE /* Vehicle.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -226,10 +224,6 @@
 		CBABF40C16E4DF9600B2A337 /* background_segm.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = background_segm.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/video/background_segm.hpp; sourceTree = SOURCE_ROOT; };
 		CBABF40D16E4DF9600B2A337 /* tracking.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tracking.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/video/tracking.hpp; sourceTree = SOURCE_ROOT; };
 		CBABF40E16E4DF9600B2A337 /* video.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = video.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/video/video.hpp; sourceTree = SOURCE_ROOT; };
-		CBABFDD316E7851600B2A337 /* Boid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Boid.cpp; path = ../../../addons/ofxFlocking/Boid.cpp; sourceTree = SOURCE_ROOT; };
-		CBABFDD416E7851600B2A337 /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Boid.h; path = ../../../addons/ofxFlocking/Boid.h; sourceTree = SOURCE_ROOT; };
-		CBABFDD516E7851600B2A337 /* ofxFlocking.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxFlocking.cpp; path = ../../../addons/ofxFlocking/ofxFlocking.cpp; sourceTree = SOURCE_ROOT; };
-		CBABFDD616E7851600B2A337 /* ofxFlocking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxFlocking.h; path = ../../../addons/ofxFlocking/ofxFlocking.h; sourceTree = SOURCE_ROOT; };
 		CBC0C64116EF3815004293FE /* Vehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vehicle.cpp; sourceTree = "<group>"; };
 		CBC0C64216EF3815004293FE /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -379,7 +373,6 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				CBABFDD216E7851600B2A337 /* ofxFlocking */,
 				4847CDD216CEA17D00F9789E /* ofxUI */,
 				4847CDA716CE9CAB00F9789E /* ofxXmlSettings */,
 				CBABF41416E4DF9600B2A337 /* ofxOpenCv */,
@@ -676,18 +669,6 @@
 			name = ofxOpenCv;
 			sourceTree = "<group>";
 		};
-		CBABFDD216E7851600B2A337 /* ofxFlocking */ = {
-			isa = PBXGroup;
-			children = (
-				CBABFDD316E7851600B2A337 /* Boid.cpp */,
-				CBABFDD416E7851600B2A337 /* Boid.h */,
-				CBABFDD516E7851600B2A337 /* ofxFlocking.cpp */,
-				CBABFDD616E7851600B2A337 /* ofxFlocking.h */,
-			);
-			name = ofxFlocking;
-			path = ../../../addons/ofxFlocking;
-			sourceTree = SOURCE_ROOT;
-		};
 		E4328144138ABC890047C5CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,8 +817,6 @@
 				4847CDB116CE9CAB00F9789E /* tinyxmlerror.cpp in Sources */,
 				4847CDB216CE9CAB00F9789E /* tinyxmlparser.cpp in Sources */,
 				4847CDB316CE9CAB00F9789E /* ofxXmlSettings.cpp in Sources */,
-				CBABFDD716E7851600B2A337 /* Boid.cpp in Sources */,
-				CBABFDD816E7851600B2A337 /* ofxFlocking.cpp in Sources */,
 				CBC0C64316EF3815004293FE /* Vehicle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
