@@ -80,12 +80,32 @@ void testApp::setup(){
     
     
     //Arduino
+    //TODO save serial device in properties file, only do dialogue prompt when connection fails
     
     serial.listDevices();
+    
 	vector <ofSerialDeviceInfo> deviceList = serial.getDeviceList();
-    serial.setup(0, 9600); //57600 //9600
-    arduinoReady = true;
+    string question = "Select Serial Port: \n";
+    
+    for(int i = 0; i< deviceList.size(); i++){
+        question += ofToString(i) + ": " + deviceList[i].getDeviceName() + "\n";
+    }
+    
+    string reply = "0";
+    
+    reply =  ofSystemTextBoxDialog(question);
+    
+    int v = atoi(reply.c_str());
+    
+    if(serial.setup(v, 9600)){ //57600 //9600
+        arduinoReady = true;
+    }else{
+        
+    }
+    
     bytesBack = "";
+    
+    
     
     //UI
     
@@ -106,11 +126,16 @@ void testApp::setup(){
 	gui->addSlider("MOTION PRESENT DELAY", 0, 30000, motionPresentDelay);
 	gui->addSlider("MAX NUMBER OF VEHICLES", 0, 20, maxVehicles);
 	gui->addSlider("MIN DIST",0,100,minDist);
+    gui->addTextArea("SERIAL DEVICE", ofToString(v) + ": " + deviceList[v].getDeviceName() );
 	
     //gui->addTextArea("TESTMODE", testModeUI, 20);
 	
     ofAddListener(gui->newGUIEvent,this,&testApp::guiEvent);
 	gui->loadSettings("GUI/guiSettings.xml");
+    
+    cout << serialDevice;
+    
+    
     memset(bytesReadString, 0, 5);
     
     serial.writeByte(HEADER);
@@ -432,6 +457,12 @@ void testApp::guiEvent(ofxUIEventArgs &e)
         minDist = slider->getScaledValue();
 		
 	}
+    if(name == "SERIAL DEVICE"){
+    
+        ofxUITextArea *textArea = (ofxUITextArea *) e.widget;
+        serialDevice = textArea->getTextString();
+        
+    }
 	
 
     

@@ -107,6 +107,7 @@ class testApp : public ofBaseApp{
 		ofVec2f vehiclePos;
 		int minDist;
 		float trackingDist;
+        string serialDevice;
   
     
     
