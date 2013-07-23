@@ -204,8 +204,8 @@ void testApp::update(){
 					scaledCentroid = contourFinder.blobs[i].centroid*1.66;
 						
 					
-					for (int v = 0; v < vehicles.size(); v ++) 
-					{	
+					for (int v = 0; v < vehicles.size(); v ++)
+                    {	
 						trackingDist = scaledCentroid.distance(vehicles[v].location);	
 						
 						if (trackingDist < detectDist) 
@@ -241,13 +241,12 @@ void testApp::update(){
 void testApp::draw(){
        
     ofSetColor(255, 255, 255);
-       
+    lastGrayImg.draw(0,0,1066,800);
+	contourFinder.draw(0,0,1066,800);
+	
     
-	lastGrayImg.draw(0,0,1066,800);
-	
-    contourFinder.draw(0,0,1066,800);
-	
 	ofNoFill();
+    
 	ofRect(rect);
 	
 	
@@ -261,17 +260,17 @@ void testApp::draw(){
 		if(vehicles[i].stop == false){
             
             vehicles[i].run();
-            vehicles[i].avoid(scaledCentroid);
-//            
-//            if(trackingDist < detectDist+100){
-//                
-//                vehicles[i].avoid(scaledCentroid);
-//                
-//                }else{
-//                    
-//                vehicles[i].wander();
-//            }
-            
+           
+
+            if(trackingDist < detectDist){
+                
+                vehicles[i].avoid(scaledCentroid);
+                
+                }else{
+                    
+                vehicles[i].wander();
+            }
+
            		
         }
         
